@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.image__container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+    width: 100vw;
+    height: 95vh;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 10%;}
+    to {opacity: 100%;}
+  }
+
+.image__counter {
+    color: #fff;
+    font-size: 1.25rem;
+    margin: 20px;    
+}
+
+.arrows {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.fa-chevron-left::before, .fa-chevron-right::before {
+    font-size: 1.8rem;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+.dot__counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fa-circle {
+    margin: 15px 5px;
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+.active__image {
+    color: rgb(75, 75, 75);
+}
